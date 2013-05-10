@@ -1,0 +1,92 @@
+#################################################################
+#																#
+#					CI_host_restrictions						#
+#																#
+#		Dave Nicholas <dave@davenicholas.me.uk> 2013 (c)		#
+#																#
+#################################################################
+
+
+
+	Summary
+-----------------------------------------------------------------
+
+This is a small library that allows you to configure access to controller
+methods by ipaddress. This library is useful when you need other websites 
+or services to access your controller methods.
+
+
+
+	Installation
+-----------------------------------------------------------------
+
+1) 
+
+	Add the neccasary files to your project
+		
+	config/host_restrictions.php -> 
+			ci/application/config/host_restrictions.php
+		
+	libraries/Host_restriction_lib.php -> 
+			ci/application/libraries/Host_restriction_lib.php
+		
+2)
+
+	In the config file you will need to create a ruleset and add
+	the ipaddresses that you would like to grant access to. The
+	file accepts absolute ipaddresses, wilcard on the tailing block
+	and a range on the tailing block. The formats are listed below
+	
+	#############################################################	
+	#		
+	#	1.1.1.1
+	#	2.2.2.*
+	#	3.3.3.3-33
+	#							
+	#############################################################
+		
+3)
+
+	Load the config file... there are 2 ways of doing this
+	
+	a) Load the config file from your config/autoload.php file by 
+	adding it to the config array. This will load the config file 
+	gloablly.
+	
+	#############################################################	
+	#		
+	#	$autoload['config'] = array('host_restrictions');
+	#															
+	#############################################################		
+	
+	b) Load the config file on an adhoc basis in the controller.
+	
+	#############################################################	
+	#		
+	#	$this->config->load('host_restrictions');
+	#															
+	#############################################################
+	
+	
+	
+	Implementation
+-----------------------------------------------------------------
+
+	In your controller method all you need to do is load the library,
+	call the validate function specifying the ruleset you wish to use
+	and evaluate the response.
+	
+	
+	#############################################################	
+	#	
+	#	$this->load->library('host_restriction_lib');
+	#
+	#	if(!$this->host_restriction_lib->validate('name_of_a_rule_set')) {
+	#		echo "Nope....".$this->host_restriction_lib->get_error();
+	#	else
+	#		echo "Yep! Yep!";
+	#														
+	#############################################################
+		
+
+	
