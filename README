@@ -12,7 +12,7 @@
 -----------------------------------------------------------------
 
 This is a small library that allows you to configure access to controller
-methods by ipaddress. This library is useful when you need other websites 
+methods by IP address. This library is useful when you need other websites 
 or services to access your controller methods.
 
 
@@ -22,7 +22,7 @@ or services to access your controller methods.
 
 1) 
 
-	Add the neccasary files to your project
+	Add the necassary files to your project
 		
 	config/host_restrictions.php -> 
 			ci/application/config/host_restrictions.php
@@ -33,8 +33,8 @@ or services to access your controller methods.
 2)
 
 	In the config file you will need to create a ruleset and add
-	the ipaddresses that you would like to grant access to. The
-	file accepts absolute ipaddresses, wilcard on the tailing block
+	the IP addresses that you would like to grant access to. The
+	file accepts absolute IP addresses, wilcard on the tailing block
 	and a range on the tailing block. The formats are listed below
 	
 	#############################################################	
@@ -51,7 +51,7 @@ or services to access your controller methods.
 	
 	a) Load the config file from your config/autoload.php file by 
 	adding it to the config array. This will load the config file 
-	gloablly.
+	globally.
 	
 	#############################################################	
 	#		
