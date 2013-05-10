@@ -42,7 +42,7 @@ or services to access your controller methods.
 	#	1.1.1.1
 	#	2.2.2.*
 	#	3.3.3.3-33
-	#							
+	#
 	#############################################################
 		
 3)
@@ -56,7 +56,7 @@ or services to access your controller methods.
 	#############################################################	
 	#		
 	#	$autoload['config'] = array('host_restrictions');
-	#															
+	#
 	#############################################################		
 	
 	b) Load the config file on an adhoc basis in the controller.
@@ -64,7 +64,7 @@ or services to access your controller methods.
 	#############################################################	
 	#		
 	#	$this->config->load('host_restrictions');
-	#															
+	#
 	#############################################################
 	
 	
@@ -85,7 +85,7 @@ or services to access your controller methods.
 	#		echo "Nope....".$this->host_restriction_lib->get_error();
 	#	else
 	#		echo "Yep! Yep!";
-	#														
+	#
 	#############################################################
 		
 
