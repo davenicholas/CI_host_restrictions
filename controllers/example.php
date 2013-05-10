@@ -19,7 +19,7 @@ class Example extends Controller {
     }
 
 	// method with hosts_restrictions applied
-	function example_of_unrestricted_method() {
+	function example_of_restricted_method() {
 	
 		// load the library 
 		$this->load->library('host_restriction_lib');
